@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BLAGH</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_contact">ContactActivity</string>
+    <string name="title_activity_balagh">BalaghActivity</string>
+    <string name="title_activity_balagh2">BalaghActivity2</string>
+    <string name="title_activity_balagh3">BalaghActivity3</string>
+</resources>
