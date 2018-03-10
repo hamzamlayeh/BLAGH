@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,10 +41,37 @@ public class ContactActivity extends AppCompatActivity {
         if (!valider()) {
             Toast.makeText(getApplicationContext(), "Verifier Tout les champs", Toast.LENGTH_LONG).show();
         } else {
-            Toast.makeText(getApplicationContext(), "Envoyer avec Succer", Toast.LENGTH_LONG).show();
 
+            Toast.makeText(getApplicationContext(), "Envoyer avec Succer", Toast.LENGTH_LONG).show();
+            sendEmail();
         }
         }
+
+    @SuppressLint("LongLogTag")
+    protected void sendEmail() {
+        Log.i("Send email", "");
+
+        String[] TO = {"khaledhizawi@gmail.com"};
+        String[] CC = {mail};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setData(Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+
+
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, suj);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Nom="+nom+"\n"+msg);
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+            finish();
+            Log.i("Finished sending email...", "");
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(this,
+                    "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     private boolean valider() {
         boolean valide = true;
@@ -82,6 +110,7 @@ public class ContactActivity extends AppCompatActivity {
 
 
 
+    @SuppressLint("NewApi")
     public void appel(View view) {
 
          ite = new Intent(Intent.ACTION_CALL);
