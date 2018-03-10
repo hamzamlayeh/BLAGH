@@ -7,4 +7,17 @@
     <string name="title_activity_balagh">BalaghActivity</string>
     <string name="title_activity_balagh2">BalaghActivity2</string>
     <string name="title_activity_balagh3">BalaghActivity3</string>
+    <string name="formulaire_de_contact">Formulaire de Contact</string>
+    <string name="envoyer">Envoyer</string>
+    <string name="contacte">Contacte</string>
+    <string name="home">Home</string>
+    <string name="balagh">Balagh</string>
+    <string name="nom">Nom</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="sujet">Sujet</string>
+    <string name="message">Message</string>
+    <string name="v_nom">Remplir Votre nom</string>
+    <string name="v_message">Remplir Votre message</string>
+    <string name="v_sujet">Remplir Votre sujet</string>
+    <string name="v_email">Votre E-mail doit etre valide</string>
 </resources>

@@ -5,216 +5,266 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#bfc0d4"
+    android:background="@drawable/bg1"
     tools:context="com.blagh.asus.blagh.ContactActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:fontFamily="Raleway Bold"
-        android:freezesText="false"
-        android:hapticFeedbackEnabled="false"
-        android:text="Contact"
-        android:textAllCaps="true"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="197dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="333dp"
-        android:layout_height="473dp"
-        android:layout_marginTop="80dp"
-        android:scrollbars="horizontal"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:id="@+id/numero"
+        android:layout_width="74dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        android:onClick="appel"
+        android:text="80 100 345"
+        android:textColor="#f77062"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-        <LinearLayout
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        android:onClick="appel"
+        app:layout_constraintBottom_toTopOf="@+id/lien"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tel" />
+
+    <TextView
+        android:id="@+id/lien"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:autoLink="web"
+        android:background="@android:color/background_light"
+        android:text="http://www.balagh.tn"
+        android:textColorLink="#f77062"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="32dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="49dp"
+        android:background="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/web" />
+
+    <TextView
+        android:id="@+id/form"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="124dp"
+        android:text="@string/formulaire_de_contact"
+        android:textColor="@android:color/background_light"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <LinearLayout
+        android:id="@+id/conte-form"
+        android:layout_width="341dp"
+        android:layout_height="239dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="115dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+
+        <EditText
+            android:id="@+id/nom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:saveEnabled="false"
-            android:scrollbarAlwaysDrawHorizontalTrack="false"
-            android:scrollbarAlwaysDrawVerticalTrack="false">
+            android:layout_height="40dp"
+            android:background="@android:color/background_light"
+            android:ems="10"
+            android:hint="@string/nom"
+            android:inputType="textPersonName"
+            android:paddingLeft="25dp"
+            android:textSize="14sp" />
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|center"
-                android:fontFamily="Raleway Bold"
-                android:freezesText="false"
-                android:hapticFeedbackEnabled="false"
-                android:text="Par Telephone :"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/background_light"
+            android:ems="10"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="25dp"
+            android:textSize="12sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+        <EditText
+            android:id="@+id/sujet"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/background_light"
+            android:ems="10"
+            android:hint="@string/sujet"
+            android:inputType="textShortMessage|textPersonName"
+            android:paddingLeft="25dp"
+            android:textSize="14sp" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="Raleway Bold"
-                    android:freezesText="false"
-                    android:hapticFeedbackEnabled="true"
-                    android:text="Numero : 80 100 345"
-                    android:textColor="@android:color/black"
-                    android:textSize="24sp" />
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:background="@android:color/background_light"
+            android:ems="10"
+            android:hint="@string/message"
+            android:inputType="textMultiLine"
+            android:paddingLeft="25dp"
+            android:textSize="14sp" />
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="3"
-                    android:onClick="appel"
-                    android:text="Appeler" />
-            </LinearLayout>
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top|center"
-                android:fontFamily="Raleway Bold"
-                android:freezesText="false"
-                android:hapticFeedbackEnabled="false"
-                android:text="Par Email :"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/nom"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Nom"
-                    android:inputType="textPersonName"
-                    android:padding="10dp"
-                    android:textAppearance="@android:style/TextAppearance.Medium" />
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:padding="10dp"
-                    android:textAppearance="@android:style/TextAppearance.Medium" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/sujet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Sujet"
-                    android:inputType="textShortMessage"
-                    android:padding="10dp"
-                    android:textAppearance="@android:style/TextAppearance.Medium" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/message"
-                    android:layout_width="match_parent"
-                    android:layout_height="114dp"
-                    android:ems="10"
-                    android:gravity="top"
-                    android:hint="Message"
-                    android:inputType="textMultiLine"
-                    android:padding="10dp"
-                    android:singleLine="false"
-                    android:textAppearance="@android:style/TextAppearance.Medium" />
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/envoyer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:onClick="Envoyer"
-                android:text="Envoyer" />
-
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="339dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/background_light"
+        android:onClick="Envoyer"
+        android:text="@string/envoyer"
+        android:textColor="#f77062"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conte-form" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.02"
-        android:background="#61ede6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="552dp">
+        app:layout_constraintRight_toRightOf="parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <Button
-                android:id="@+id/imageButton4"
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/agenda3" />
+
+            <ImageView
+                android:id="@+id/imageView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1"
                 android:onClick="accueil"
-                android:text="Accueil" />
+                app:srcCompat="@drawable/home" />
 
-            <Button
-                android:id="@+id/imageButton7"
+            <ImageView
+                android:id="@+id/imageView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:onClick="balagh"
-                android:text="Balagh" />
+                app:srcCompat="@drawable/balagh" />
 
-            <Button
-                android:id="@+id/contactb"
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="26dp"
+            android:layout_marginTop="34dp"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/contacte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="19dp"
                 android:layout_weight="1"
-                android:text="Contact" />
+                android:text="@string/contacte"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/imageButton5"
+            <TextView
+                android:id="@+id/home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="exite"
-                android:text="Exite" />
+                android:layout_marginLeft="22dp"
+                android:layout_weight="1"
+                android:text="@string/home"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
 
+            <TextView
+                android:id="@+id/balagh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:text="@string/balagh"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp" />
         </LinearLayout>
     </android.support.design.widget.BottomNavigationView>
 

@@ -61,7 +61,7 @@ public class ContactActivity extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, suj);
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Nom="+nom+"\n"+msg);
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Nom="+name+"\n"+msg);
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
@@ -76,28 +76,24 @@ public class ContactActivity extends AppCompatActivity {
     private boolean valider() {
         boolean valide = true;
         if (name.isEmpty() || name.length() > 25) {
-            nom.setError(" Remplir Votre nom ");
+            nom.setError(getString(R.string.v_nom));
             valide = false;
         }
         if (msg.isEmpty() ) {
-            message.setError("Remplir Votre message");
+            message.setError(getString(R.string.v_message));
             valide = false;
         }
         if (suj.isEmpty() || suj.length() > 25) {
-            sujet.setError("Remplir Votre sujet");
+            sujet.setError(getString(R.string.v_sujet));
             valide = false;
         }
         if (mail.isEmpty() || (!android.util.Patterns.EMAIL_ADDRESS.matcher(mail).matches())) {
-            email.setError("Votre E-mail doit etre valide ");
+            email.setError(getString(R.string.v_email));
             valide = false;
         }
         return valide;
     }
-    public void exite(View view) {
-         ite = new Intent(Intent.ACTION_MAIN);
-        ite.addCategory(Intent.CATEGORY_HOME);
-        startActivity(ite);
-    }
+
     public void accueil(View view) {
          ite = new Intent(ContactActivity.this, AcueilActivity.class);
         startActivity(ite);
