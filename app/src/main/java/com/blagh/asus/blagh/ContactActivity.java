@@ -51,25 +51,21 @@ public class ContactActivity extends AppCompatActivity {
     protected void sendEmail() {
         Log.i("Send email", "");
 
-        String[] TO = {"khaledhizawi@gmail.com"};
-        String[] CC = {mail};
+        String TO = "hamzamlayeh@outlook.com";
+        try {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
-
+        emailIntent.setType("message/rfc822");
 
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        emailIntent.putExtra(Intent.EXTRA_CC, CC);
+        emailIntent.putExtra(Intent.EXTRA_CC, mail);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, suj);
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Nom="+name+"\n"+msg);
+        emailIntent.putExtra(Intent.EXTRA_TEXT,msg);
 
-        try {
-            startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-            finish();
-            Log.i("Finished sending email...", "");
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(this,
-                    "There is no email client installed.", Toast.LENGTH_SHORT).show();
+        startActivity(emailIntent);
+            //Log.i("Finished sending email...", "");
+        } catch (Exception ex) {
+            Toast.makeText(this,"There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
     }
 
