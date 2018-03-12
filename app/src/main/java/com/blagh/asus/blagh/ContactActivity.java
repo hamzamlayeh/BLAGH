@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -20,6 +21,7 @@ public class ContactActivity extends AppCompatActivity {
 
     final private int requestcodeR=123;
     EditText message, nom, sujet, email;
+    TextView num;
     String name, msg, suj,mail;
     Intent ite;
 
@@ -32,6 +34,8 @@ public class ContactActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         sujet = (EditText) findViewById(R.id.sujet);
         message =(EditText) findViewById(R.id.message);
+
+       // num =findViewById(R.id.numero);
     }
     public void Envoyer(View view) {
         name = nom.getText().toString().trim();
@@ -115,6 +119,8 @@ public class ContactActivity extends AppCompatActivity {
             }
             startActivity(ite);
         }}
+
+
 
 
 }

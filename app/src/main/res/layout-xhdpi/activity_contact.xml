@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="197dp"
-        android:layout_height="50dp"
+        android:layout_width="191dp"
+        android:layout_height="51dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
@@ -21,243 +21,204 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/numero"
-        android:layout_width="74dp"
-        android:layout_height="20dp"
+        android:id="@+id/form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/background_light"
-        android:onClick="appel"
-        android:text="80 100 345"
-        android:textColor="#f77062"
-        android:textSize="14sp"
+        android:layout_marginTop="104dp"
+        android:text="@string/formulaire_de_contact"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/background_light"
-        android:onClick="appel"
-        app:layout_constraintBottom_toTopOf="@+id/lien"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.43"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/tel" />
-
-    <TextView
-        android:id="@+id/lien"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="72dp"
-        android:autoLink="web"
-        android:background="@android:color/background_light"
-        android:text="http://www.balagh.tn"
-        android:textColorLink="#f77062"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="32dp"
-        android:layout_height="19dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="49dp"
-        android:background="@android:color/background_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:srcCompat="@drawable/web" />
-
-    <TextView
-        android:id="@+id/form"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
-        android:text="@string/formulaire_de_contact"
-        android:textColor="@android:color/background_light"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.019" />
-
     <LinearLayout
         android:id="@+id/conte-form"
-        android:layout_width="341dp"
-        android:layout_height="239dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="115dp"
+        android:layout_width="259dp"
+        android:layout_height="219dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo">
 
         <EditText
             android:id="@+id/nom"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:background="@android:color/background_light"
             android:ems="10"
             android:hint="@string/nom"
             android:inputType="textPersonName"
-            android:paddingLeft="25dp"
-            android:textSize="14sp" />
+            android:paddingLeft="25dp" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:background="@android:color/background_light"
             android:ems="10"
             android:hint="@string/e_mail"
             android:inputType="textEmailAddress"
-            android:paddingLeft="25dp"
-            android:textSize="12sp" />
+            android:paddingLeft="25dp" />
 
         <EditText
             android:id="@+id/sujet"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:background="@android:color/background_light"
             android:ems="10"
             android:hint="@string/sujet"
-            android:inputType="textShortMessage|textPersonName"
-            android:paddingLeft="25dp"
-            android:textSize="14sp" />
+            android:inputType="textPersonName"
+            android:paddingLeft="25dp" />
 
         <EditText
             android:id="@+id/message"
             android:layout_width="match_parent"
-            android:layout_height="102dp"
+            android:layout_height="85dp"
             android:background="@android:color/background_light"
             android:ems="10"
             android:hint="@string/message"
             android:inputType="textMultiLine"
-            android:paddingLeft="25dp"
-            android:textSize="14sp" />
+            android:paddingLeft="25dp" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="339dp"
-        android:layout_height="38dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
+        android:id="@+id/envoyer"
+        android:layout_width="257dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:background="@android:color/background_light"
         android:onClick="Envoyer"
         android:text="@string/envoyer"
         android:textColor="#f77062"
-        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/conte-form" />
 
+    <View
+        android:id="@+id/tirer3"
+        android:layout_width="259dp"
+        android:layout_height="1sp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="232dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+    <View
+        android:id="@+id/tirer"
+        android:layout_width="259dp"
+        android:layout_height="1sp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="275dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/agenda3" />
+    <View
+        android:id="@+id/tirer2"
+        android:layout_width="259dp"
+        android:layout_height="1sp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="320dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:onClick="accueil"
-                app:srcCompat="@drawable/home" />
 
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="15dp"
-                android:layout_weight="1"
-                android:onClick="balagh"
-                app:srcCompat="@drawable/balagh" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="26dp"
-            android:layout_marginTop="34dp"
+        <TextView
+            android:id="@+id/contacte"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_weight="1"
+            android:text="Contacte"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp" />
 
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:onClick="accueil"
+            android:text="Home"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/contacte"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="19dp"
-                android:layout_weight="1"
-                android:text="@string/contacte"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
+        <TextView
+            android:id="@+id/balagh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"
+            android:onClick="balagh"
+            android:text="Balagh"
+            android:textColor="@android:color/background_light"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-            <TextView
-                android:id="@+id/home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="22dp"
-                android:layout_weight="1"
-                android:text="@string/home"
-                android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginTop="34dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button">
 
-            <TextView
-                android:id="@+id/balagh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_weight="1"
-                android:text="@string/balagh"
-                android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/agenda3" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/balagh" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
