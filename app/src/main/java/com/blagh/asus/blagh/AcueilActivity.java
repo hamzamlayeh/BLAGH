@@ -2,6 +2,7 @@ package com.blagh.asus.blagh;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -104,6 +105,10 @@ public class AcueilActivity extends AppCompatActivity {
 
 
     public void balagh(View view) {
+        SharedPreferences.Editor editor = getSharedPreferences("file", MODE_PRIVATE).edit();
+        editor.remove("Ligne");
+        editor.remove("Transport");
+        editor.commit();
         ite = new Intent(AcueilActivity.this, BalaghActivity.class);
         startActivity(ite);
     }

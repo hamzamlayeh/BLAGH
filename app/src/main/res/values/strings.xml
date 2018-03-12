@@ -20,4 +20,25 @@
     <string name="v_message">Remplir Votre message</string>
     <string name="v_sujet">Remplir Votre sujet</string>
     <string name="v_email">Votre E-mail doit etre valide</string>
+    <string-array name="TGM">
+        <item>Tunis Marine</item>
+        <item>le Bac</item>
+        <item>Goulette</item>
+        <item>Goulette neuve</item>
+        <item>Goulette casino</item>
+        <item>Kheireddine</item>
+        <item>Aéroport</item>
+        <item>Le Kram</item>
+        <item>Carthage Salammbô</item>
+        <item>Carthage Byrsa</item>
+        <item>Carthage Dermech</item>
+        <item>Carthage Hannibal</item>
+        <item>Carthage Présidence</item>
+        <item>Carthage Amilcar</item>
+        <item>Sidi Bou Saïd</item>
+        <item>Sidi Dhrif</item>
+        <item>La Corniche</item>
+        <item>Marsa Plage</item>
+    </string-array>
+
 </resources>

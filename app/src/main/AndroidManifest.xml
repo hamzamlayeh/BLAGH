@@ -32,7 +32,8 @@
             android:label="@string/title_activity_balagh2" />
         <activity
             android:name=".BalaghActivity3"
-            android:label="@string/title_activity_balagh3"></activity>
+            android:label="@string/title_activity_balagh3" />
+        <activity android:name=".BalaghActivity4"></activity>
     </application>
 
 </manifest>

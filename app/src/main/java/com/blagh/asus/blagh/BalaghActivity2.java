@@ -45,20 +45,19 @@ public class BalaghActivity2 extends AppCompatActivity {
         spinner = (Spinner) findViewById(R.id.spinner);
         description=(EditText)findViewById(R.id.description);
 
-//        String restoredesc = sherd.getString("description", null);
-//
-//        if (restoredesc != null) {
-//            String dsc = sherd.getString("description", "");
-//            description.setText(dsc);
-//
-//        }
+        String restoredesc = sherd.getString("description", null);
+
+        if (restoredesc != null) {
+            String dsc = sherd.getString("description", "");
+            description.setText(dsc);
+
+        }
         final List<String> spinerarray = new ArrayList<String>();
         spinerarray.add("Chisir Votre Gouvernorat ");
         spinerarray.add("Grand Tunis");
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinerarray);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -73,6 +72,7 @@ public class BalaghActivity2 extends AppCompatActivity {
 
             }
         });
+
     }
     public void violence(View view) {
          checked = ((RadioButton) view).isChecked();
